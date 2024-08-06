@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='shortcut icon' type='image/x-icon' href='../img/logo.jpeg' />
+	<link rel="stylesheet" href="./style.css">
+	<title>Log In</title>
+</head>
+<body onload="load()">
+	<div class="side">
+		<div class="card">
+			<form method="get">
+				<table>
+					<tr>
+						<td id="title">
+							Log In
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="wrap-input" >
+								Username :</div>
+								<input Id="usname" class="input" type="text" name="username" placeholder="Enter username">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="wrap-input" >
+								Password :</div>
+								<input Id="pasw" class="input" type="password" name="pass" placeholder="Enter password">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="submit" onclick="LogIn()"class="login-btn" value="LOG IN" >
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+	<div class="gradient"></div>
+	<img alt="background" class="container-login"  src='https://colorlib.com/etc/lf/Login_v9/images/bg-01.jpg'>
+</body>
+</html>
+
+<script>
+	function load(){
+		document.getElementsByClassName('side')[0].style.transform=' translateX(0px)'
+		document.getElementsByClassName('container-login')[0].style.transform='translateX(-42%)'
+	}
+	function LogIn(){
+					var finish = document.getElementById('finish');
+	  var usname = document.getElementById("usname").value;
+	  var pasw = document.getElementById("pasw").value;
+	  var text;
+	
+	  // If the username & password is as follows
+	  if ((usname === "newuser") & (pasw === "123456")) {
+			document.getElementsByClassName('side')[0].innerHTML="No Account Yet...";
+			
+	  finish.style.display = "block";
+			text = "Pocessing...";
+		
+		window.close();
+			}		
+	  // If the username & password is anything else
+	   else {
+	   finish.style.display = "block";				
+		text = "Invalid Credentials...";
+	
+	}
+	  document.getElementById("output").innerHTML = text;
+	}
+	</script>

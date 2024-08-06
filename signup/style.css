@@ -1,0 +1,87 @@
+:root{
+    --main:#240088;
+    --main-dark:#1b0066;
+    --main-light:#3700cf;
+}
+.side {
+    position: fixed;
+    z-index: 50;
+    display: flex;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-radius: 25px 0px 0px 25px;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    transition: 3s;
+    transform: translateX(100px);
+}
+.gradient {
+    position: fixed;
+    width: 58%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(45deg, #ef00ff7a, #5900ff7a);
+}
+.card {
+    width: 20vw;
+    height: 62%;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 14px 0px #7f7f7f;
+    color: var(--main);
+}
+.card table {
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+}
+td#title {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18pt;
+    text-align: center;
+    width: 100%;
+}
+img.container-login{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 90%;
+    height: 100%;
+    z-index: -1;
+    transition: 3s;
+    transform: translateX(-23%);
+}
+td input {
+    height: 4vh;
+    width: 76%;
+    margin-left: 6%;
+    border: none;
+    border-radius: 18px;
+    padding-left: 12pt;
+    font-weight: 600;
+    box-shadow: inset 0 0 14px 0px #7f7f7f;
+}
+input.login-btn {
+    width: 50%;
+    margin-left: 20%;
+    padding: 0;
+    color: #fff;
+    background-color: #0a8f00;
+}
+
+input.login-btn:hover {
+    cursor: pointer;
+    background-color: #076300;
+}
+
+td {
+    padding: 20px 0px 20px 0px;
+}
+
+.wrap-input {line-height: 20pt;font-family: sans-serif;font-weight: 600;padding-left: 12pt;}
